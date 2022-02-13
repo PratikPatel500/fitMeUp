@@ -13,6 +13,7 @@ function mul(x,y){
 function div(x, y) {
     console.log(x / y);
 }
+
 module.exports.addition = add
 module.exports.substraction = sub
 module.exports.multiplication = mul
