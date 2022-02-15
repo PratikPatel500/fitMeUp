@@ -9,6 +9,8 @@
   "author": "Pratik Patel",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mogoose": "^0.0.1-security",
+    "mongoose": "^6.2.1"
   }
 }

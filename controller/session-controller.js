@@ -28,6 +28,20 @@ function saveUser(req,res) {
 }
 
 
+function loginUser(req,res) {
+     
+    console.log(req.body)
+
+    res.json({
+        msg:"Done login ....Done",
+        status:200,
+        data:req.body
+    })
+
+    res.write("data saved")
+    res.end()
+}
 module.exports.login = login
 module.exports.signup = signup
 module.exports.saveuser = saveUser
+module.exports.loginUser= loginUser
