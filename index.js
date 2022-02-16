@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 //database
-mongoose.connect('mongodb://localhost:27017/my_database(function(err)',function(err){
+mongoose.connect('mongodb://localhost:27017/fitMeUp',function(err){
     if(err){
         console.log("db connection failed")
         console.log(err);
@@ -19,9 +19,6 @@ mongoose.connect('mongodb://localhost:27017/my_database(function(err)',function(
         console.log("db connected");
     }
     })
-
-
-
 
 //url
 
