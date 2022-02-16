@@ -21,7 +21,6 @@ mongoose.connect('mongodb://localhost:27017/fitMeUp',function(err){
     })
 
 //url
-
 app.get("/", function (req, res) {
 res.write("welcome...")
 res.end()
