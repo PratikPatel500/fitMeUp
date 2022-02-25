@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 
 const sessionController = require("./controller/session-controller") //web---accept url encoded
 const roleController = require("./controller/role-controller")
+const userController = require("./controller/user-controller")
 
 const app = express()
 //middle ware
@@ -34,9 +35,16 @@ app.post("/loginUser",sessionController.loginUser)
 
 //role
 app.post("/roles",roleController.addRole)
+app.get("/roles",roleController.getAllRoles)
+app.delete("/roles/:roleId",roleController.deleteRole)
+app.put("/roles",roleController.updateRole)
+
+
+//user
+app.post("/users",userController.addUser)
+
 
 //server 
-
 app.listen(3000, function () {
     console.log("server started on 3000");
 })

@@ -1,0 +1,15 @@
+20-2-2022
+user->
+    userId
+    firstName
+    email
+    password
+    roleId[fk:role]
+
+
+1)Create MOdel
+2)Create Controller
+3) Routing (url)
+4) Testing
+
+
