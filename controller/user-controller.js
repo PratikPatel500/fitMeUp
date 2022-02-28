@@ -15,6 +15,7 @@ module.exports.addUser=function(req,res){
 
     })
 
+    
     user.save(function(err,data){
         if(err){
                 res.json({msg:"Something went wrong!!!",data:err,status:-1})

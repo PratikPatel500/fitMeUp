@@ -7,6 +7,7 @@ let RoleSchema =new mongoose.Schema({
     }
 })
 
+
 //model
 
 let RoleModel = mongoose.model("role",RoleSchema)
