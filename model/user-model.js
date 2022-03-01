@@ -1,15 +1,15 @@
 const mongoose=require("mongoose")
  
 const UserSchema= new mongoose.Schema({
-    FirstName : {
+    firstName : {
         type:String,
         required:true
     },
     Email : {
-        type:"String"
+        type:String
     },
     password : {
-        type:"String"
+        type:String
     },
     role : {
             type:mongoose.Schema.Types.ObjectId,
@@ -17,6 +17,6 @@ const UserSchema= new mongoose.Schema({
     }
 })
 
-const UserModel =mongoose.model("user",UserSchema)
+const UserModel = mongoose.model("user",UserSchema)
 module.exports = UserModel
 
