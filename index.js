@@ -1,6 +1,5 @@
 const express = require("express") //mobile---accept json data from request and set data into body
 const mongoose = require("mongoose")
-import opn from 'opn';
 
 const sessionController = require("./controller/session-controller") //web---accept url encoded
 const roleController = require("./controller/role-controller")
@@ -42,10 +41,14 @@ app.put("/roles",roleController.updateRole)
 
 //user
 app.post("/users",userController.addUser)
+app.get("/users",userController.getAllUsers)
+app.delete("/users/:userId",userController.deleteUser)
+
 
 
 //server 
 app.listen(3000, function () {
-    console.log(opn("server started on 3000"));
+    console.log("server started on 3000");
 })
+
 
