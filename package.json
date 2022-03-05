@@ -9,9 +9,10 @@
   "author": "Pratik Patel",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2",
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.3",
     "mogoose": "^0.0.1-security",
-    "mongoose": "^6.2.1",
+    "mongoose": "^6.2.4",
     "opn": "^6.0.0"
   }
 }

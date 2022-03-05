@@ -23,8 +23,6 @@ function saveUser(req,res) {
         data:req.body
     })
 
-    res.write("data saved")
-    res.end()
 }
 
 
