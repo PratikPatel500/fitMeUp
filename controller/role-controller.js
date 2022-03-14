@@ -1,12 +1,11 @@
-const { status } = require("express/lib/response");
-const { off } = require("../model/role-model");
 const RoleModel=require("../model/role-model")
 
-module.exports.addRole = function (req,res){
+module.exports.addRole = function (req, res){
     //db insert role
     console.log(req.body.roleName);
+
     let role=new RoleModel({
-        roleName:req.body.roleName
+        roleName: req.body.roleName
     })
 
     role.save(function(err,success){
@@ -75,35 +74,20 @@ module.exports.updateRole = function(req,res){
 }
 
 
+module.exports.getRoleById = function (req, res) {
 
+    console.log(req.params.roleId);
 
+    RoleModel.findOne({ _id: req.params.roleId }, function (err, data) {
+        if (err) {
+            res.json({
+                status: -1,
+                msg: "SMW",
+                data: err
 
-
-//roleId pk--Auto increment 
-//roleName==***
-
-
-// function addRole(req,res){
-// }
-// module.exports.addRole=addRole
-
-
-
-// modele.exports.updateRole=function (req,res){
-
-// }
-
-// module.exports.deleteRole=function (req,res){
-
-// }
-
-// module.exports.getAllRole=function (req,res){
-
-// }
-
-// module.exports.getRoleId=function (req,res){
-    
-// }
-
-
-
+            })
+        } else {
+            res.json({ status: 200, msg: "role ret...", data: data })
+        }
+    })
+}

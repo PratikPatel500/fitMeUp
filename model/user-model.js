@@ -5,6 +5,16 @@ const UserSchema = new mongoose.Schema({
     firstName:{
         type:String,
         required:true
+
+    },
+
+    lastName:{
+        type:String,
+        
+    },
+    
+    dob:{
+        type: Date
     },
 
     email:{
@@ -12,16 +22,28 @@ const UserSchema = new mongoose.Schema({
     },
 
     password:{
+        type:String,
+        
+    },
+
+    gender:{
         type:String
+    },
+
+    contactNumber:{
+        Types:String
     },
 
     role:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"role"
+    }, 
+    otp:{
+        type:String
     }
 
 
 })
 
-const UserModel = mongoose.model("user",UserSchema)
+const UserModel = mongoose.model("user", UserSchema)
 module.exports = UserModel

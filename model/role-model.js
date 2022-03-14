@@ -11,7 +11,7 @@ let RoleSchema =new mongoose.Schema({
 //model
 
 let RoleModel = mongoose.model("role",RoleSchema)
-module.exports =RoleModel
+module.exports = RoleModel
 
 // //schema
 
