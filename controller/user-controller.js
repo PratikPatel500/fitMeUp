@@ -156,3 +156,18 @@ module.exports.login = function(req,res){
         }
     })
 } 
+
+
+
+module.exports.disableUser = function (req, res) {
+    let userId = req.body.userId
+    // console.log(userId);
+    UserModel.updateOne({ _id: userId }, { isActive: false, status: "Disable" }, function (err, data) {
+        if (err) {
+            res.json({ msg: "Something Wrong", status: -1, data: err })
+        }
+        else {
+            res.json({ msg: "Data Retraive", status: 200, data: data })
+        }
+    })
+}

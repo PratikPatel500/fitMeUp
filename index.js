@@ -58,10 +58,11 @@ app.post("/users",userController.addUser) //customer vendor admin
 app.get("/users",userController.getAllUsers)
 app.delete("/users/:userId",userController.deleteUser)
 app.put("/users",userController.updateUser)
+app.post("/disableuser/", userController.disableUser)
 app.post("/login",userController.login)
 
 app.post("/savecustomer",userController.addCustomer) //signup  -- customer 
- 
+app.post("/updatepasswordwithotp",sessionController.updatePasswordWithOtp) //password update with otp 
 
 
 
